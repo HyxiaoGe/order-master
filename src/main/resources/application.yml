@@ -1,0 +1,46 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password:
+    url: jdbc:mysql://localhost/sell?useUnicode=true&characterEncoding=utf-8&useSSL=false
+  jpa:
+    server:
+    show-sql: true
+  redis:
+    host: 127.0.0.1
+    port: 6379
+server:
+  context-path: /sell
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+##  path: /var/log/tomcat/
+#  file: /var/log/tomcat/sell.log
+#  level:   wxd898fcb01713c658
+#    com.imooc.LoggerTest: debug
+
+wechat:
+  mpAuthrizeAppId: 授权AppID #测试账号 用于授权
+  mpAppId: 支付AppID
+  mpAppSecret: 微信序列号
+
+  # 开放平台,  卖家扫码登录用  openid
+  #  微信推送模板消息 测试号openid
+#  https://open.weixin.qq.com/connect/qrconnect?appid=wx6ad144e54af67d87&redirect_uri=http%3A%2F%2Fsell.springboot.cn%2Fsell%2Fqr%2FoTgZpwYiIQb_55nghQ48FCwK6Qw0&response_type=code&scope=snsapi_login&state=http://hyxiao.natapp1.cc/wechat/qrUserInfo
+  openAppId:
+  openAppSecret:
+
+  # 支付/商户号
+  mchId:
+  mchKey:
+  # 发起支付不需要证书, 退款需要
+  keyPath:
+  notifyUrl:
+  templateId:
+    orderStatus:
+
+projectUrl:
+  wechatMpAuthorize:
+  wechatOpenAuthorize:
+  sell:
